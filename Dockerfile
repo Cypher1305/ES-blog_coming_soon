@@ -1,35 +1,29 @@
-# Utiliser une image PHP officielle avec Apache
+# Utiliser l'image officielle PHP avec Apache
 FROM php:8.2-apache
 
 # Installer les extensions PHP nécessaires
-RUN apt-get update && apt-get install -y \
-    unzip \
-    curl \
-    git \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libonig-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql mbstring
+RUN docker-php-ext-install pdo pdo_mysql
 
-# Installer Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Activer le module mod_rewrite pour Laravel
+RUN a2enmod rewrite
 
-# Copier les fichiers de l'application
+# Copier tous les fichiers du projet dans /var/www/html
 COPY . /var/www/html
 
-# Définir le répertoire de travail
-WORKDIR /var/www/html
-
-# Installer les dépendances avec Composer
-RUN composer install --no-dev --optimize-autoloader
-
-# Donner les permissions correctes
+# Définir les permissions correctes
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Modifier le VirtualHost d'Apache pour que la racine soit /public
+RUN echo '<VirtualHost *:80>\n\
+    DocumentRoot /var/www/html/public\n\
+    <Directory /var/www/html/public>\n\
+        AllowOverride All\n\
+        Require all granted\n\
+    </Directory>\n\
+</VirtualHost>' > /etc/apache2/sites-available/000-default.conf
 
 # Exposer le port 80
 EXPOSE 80
 
-# Commande de démarrage
+# Lancer Apache
 CMD ["apache2-foreground"]
