@@ -15,11 +15,15 @@ COPY . /var/www/html
 # Définir /var/www/html comme répertoire de travail
 WORKDIR /var/www/html
 
+# Définir les permissions correctes avant installation de Composer
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
 # Installer les dépendances de Laravel
 RUN composer install --no-dev --optimize-autoloader
 
-# Définir les permissions correctes
-RUN chown -R www-data:www-data storage bootstrap/cache
+# Générer le fichier .env et la clé Laravel
+RUN cp .env.example .env && php artisan key:generate
 
 # Modifier Apache pour pointer vers /public
 RUN echo '<VirtualHost *:80>\n\
@@ -29,6 +33,9 @@ RUN echo '<VirtualHost *:80>\n\
         Require all granted\n\
     </Directory>\n\
 </VirtualHost>' > /etc/apache2/sites-available/000-default.conf
+
+# Redémarrer Apache pour appliquer les changements
+RUN service apache2 restart
 
 # Exposer le port 80
 EXPOSE 80
