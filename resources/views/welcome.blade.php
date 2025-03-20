@@ -17,7 +17,7 @@
 <body class="items-center justify-center h-full text-gray-800 text-center w-full">
     <web-particles id="tsparticles" class="absolute top-0 left-0 w-full h-full z-0" options='{"fps_limit":60,"interactivity":{"detectsOn":"canvas","events":{"onClick":{"enable":true,"mode":"push"},"onHover":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"push":{"particles_nb":4},"repulse":{"distance":200,"duration":0.4}}},"particles":{"color":{"value":"#00bfff"},"links":{"color":"#00bfff","distance":150,"enable":true,"opacity":0.1,"width":1},"move":{"bounce":false,"direction":"none","enable":true,"outMode":"out","random":false,"speed":1,"straight":false},"number":{"density":{"enable":true,"area":800},"value":80},"opacity":{"value":0.2},"shape":{"type":"circle"},"size":{"random":true,"value":5}},"detectRetina":true}'></web-particles>
 
-    <div class="relative z-10 mt-[85px] bg-white space-y-8 w-[70%] sm:w-[60%] md:w-[50%] lg:w-[25%] justify-center items-center mx-auto">
+    <div class="relative z-10 mt-[85px] bg-white space-y-8 w-[70%] sm:w-[60%] md:w-[50%] lg:w-[15%] justify-center items-center mx-auto">
         <img src="log.png" alt="ES-Blog Logo" class="mx-auto w-36 sm:w-44 md:w-52 h-auto">
         
         <div id="countdown" class="grid grid-flow-col gap-5 text-center auto-cols-max mx-auto">
