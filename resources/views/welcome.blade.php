@@ -20,11 +20,11 @@
         <div id="countdown" class="grid grid-cols-4 gap-4 text-center my-6">
             <div class="flex flex-col p-3 bg-gray-900 text-white rounded-lg">
                 <span class="text-3xl md:text-5xl font-mono" id="days">00</span>
-                <span class="text-sm md:text-base">jours</span>
+                <span class="text-sm md:text-base">days</span>
             </div>
             <div class="flex flex-col p-3 bg-gray-900 text-white rounded-lg">
                 <span class="text-3xl md:text-5xl font-mono" id="hours">00</span>
-                <span class="text-sm md:text-base">heures</span>
+                <span class="text-sm md:text-base">hours</span>
             </div>
             <div class="flex flex-col p-3 bg-gray-900 text-white rounded-lg">
                 <span class="text-3xl md:text-5xl font-mono" id="minutes">00</span>
@@ -35,21 +35,20 @@
                 <span class="text-sm md:text-base">sec</span>
             </div>
         </div>
-        <h1 class="text-lg md:text-xl font-bold">Technologies - Inspirations - Connections</h1>
+        <h1 class="text-md md:text-lg font-bold">Technologies - Inspirations - Connections</h1>
         <div id="socials" class="flex justify-center space-x-6 my-4">
-            <a href="#" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/company/esblog/" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-linkedin"></i></a>
             <a href="http://www.youtube.com/@esblogci" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-tiktok"></i></a>
             <a href="https://whatsapp.com/channel/0029VaWUvU84tRrqQPPujC2I" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.facebook.com/profile.php?id=61558122104581" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/esblog.info?igsh=MXZ4MjZoaXhzMTdwZw==" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-instagram"></i></a>
         </div>
         <button id="discover-btn" class="hidden px-6 py-3 bg-blue-500 text-white text-lg rounded-lg mt-4">Découvrez esblog.info</button>
     </div>
     
     <p class="absolute bottom-4 text-xs text-gray-600">
         <i class="fas fa-code"></i> and <i class="fas fa-palette"></i> with ❤️ by
-        <strong>Cypher1305</strong>
+        <a href="https://www.benedicteyao.me" target="_blank" rel="noopener noreferrer"><strong>Cypher1305</strong></a>
     </p>
     
     <script>
