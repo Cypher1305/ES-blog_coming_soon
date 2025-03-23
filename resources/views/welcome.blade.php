@@ -35,7 +35,7 @@
                 <span class="text-sm md:text-base">sec</span>
             </div>
         </div>
-        <h1 class="text-md md:text-lg font-bold">Technologies - Inspirations - Connections</h1>
+        <h1 class="text-sm md:text-lg font-bold">Technologies - Inspirations - Connections</h1>
         <div id="socials" class="flex justify-center space-x-6 my-4">
             <a href="https://www.linkedin.com/company/esblog/" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-linkedin"></i></a>
             <a href="http://www.youtube.com/@esblogci" class="text-[#00bfff] text-3xl md:text-4xl hover:scale-110"><i class="fab fa-youtube"></i></a>
