@@ -46,9 +46,9 @@
         <button id="discover-btn" class="hidden px-6 py-3 bg-[#00bfff] text-white text-lg rounded-lg mt-4">Découvrez esblog.info</button>
     </div>
     
-    <p class="bottom-4 text-xs text-gray-600">
+    <p class="bottom-4 text-xs text-gray-600 z-10">
         <i class="fas fa-code"></i> and <i class="fas fa-palette"></i> with ❤️ by
-        <a href="https://www.benedicteyao.me" target="_blank" rel="noopener noreferrer"><strong>Cypher1305</strong></a>
+        <a href="https://benedicteyao.me" target="_blank" rel="noopener noreferrer"><strong>Cypher1305</strong></a>
     </p>
     
     <script>
